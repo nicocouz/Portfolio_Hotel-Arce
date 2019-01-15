@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arce</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Arapey" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- SMOOTH SCROLL -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+  <!-- End of SMOOTH SCROLL -->
+
+    <!-- Carousel -->
+
+    <div class="carousel" id="top">
+      <img class="mySlides w3-animate-fading" src="img/suite2.png">
+      <img class="mySlides w3-animate-fading" src="img/maison2.png">
+      <img class="mySlides w3-animate-fading" src="img/environ2.png">
+      <img class="mySlides w3-animate-fading" src="img/carte2.png">
+    </div>
+
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 9000);
+      }
+    </script>
+
+  <!-- NavBar -->
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#home">La Maison</a></li>
+      <li><a href="#table">La Table</a></li>
+      <li><a href="#chambre">Les Chambres & Suites</a></li>
+      <li><a href="#jardin">Le Jardin et ses Environs</a></li>
+      <li><a href="#contact">Tarifs et Contacts</a></li>
+      <li style="float:right"><a class="active" href="#about">Reservation</a></li>
+    </ul>
+  </nav>
+
+  <!-- Titre -->
+
+  <header class="header">
+    <h1>- Arcé -</h1>
+    <center>
+      <hr class="separator">
+    </center>
+    <h2>Hotel - Restaurant</h2>
+    <h3>&nbsp; &#9733; &#9733; &#9733; &#9733;</h3>
+  </header>
+  <br>
+
+  <!-- La Maison -->
+
+  <div class="wrapper-maison" id="home">
+    <div>
+      <a href="#"><img src="img/maison.jpg" alt=""></a>
+    </div>
+    <div>
+      <a href="#"><h1>La Maison</h1></a>
+      <hr>
+      <p>Cinq générations se sont relayées dans cette maison authentique du Pays Basque au pied du col d'Ispéguy et Arcé et devenu, au fil du temps, la référence en matière de savoir-vivre.
+        <br><br> On y vient pour un repas ou quelques jours avec la garantie du calme propice au repos. A l'ombre des platanes centenaires caressés par le scintillement de la rivière ou dans le trinquet aménagé chaleureusement, vous apprécierez une cuisine
+        dans la tradition basque. Des chambres et des suites... ouvrant sur des perspectives uniques coté montagne ou jardin.</p>
+    </div>
+  </div>
+
+  <!-- La Table -->
+
+  <div class="wrapper-table" id="table">
+    <div>
+      <a href="#"><h1>La Table</h1></a>
+      <hr>
+      <p>A l'ombre des platanes centenaires caressés par le scintillement de l'eau ou dans le trinquet amanagé chaleureusemen, vous apprecierez une cuisine dans la grande tradition basque.
+        <br> <br> Au gré des saisons, Pascal Arcé marie son savoir-faire aux meilleurs produits du terroir: agneaux du pays, palombes, truites de Banka, légumes rustiques, fromages de brebis ...
+        <br> <br>
+        <a class="carte" href="#">La Carte</a>
+      </p>
+    </div>
+    <div>
+      <a href="#"><img src="img/carte3.jpg" alt=""></a>
+    </div>
+  </div>
+
+  <!-- Chambres et Suites -->
+
+  <div class="wrapper-chambre" id="chambre">
+    <div>
+      <a href="#"><img src="img/chambre.jpg" alt=""></a>
+    </div>
+    <div>
+      <br>
+      <a href="#"><h1>Les Chambres & Suites</h1></a>
+      <hr>
+      <p>L'hôtel est le parfait reflet de l'hospitalité basque qui excelle à lier tradition et modernité. Des chambres et des suites joliment décorées ouvrant sur des perspectives uniques côté rivière, côté montagne ou jardin d'hortansias ...
+        <br> <br> Deux magnifiques suites dans notre villa indépendante surplombant la rivière avec une vue imprenable sur les montagnes. Séjour au calme garanti avec tout le confort nécessaire pour de parfaites vacances.</p>
+    </div>
+  </div>
+
+  <!-- Jardin et Environs -->
+
+  <div class="wrapper-jardin" id="jardin">
+    <div>
+      <a href="#"><h1>Le Jardin et ses Environs</h1></a>
+      <hr>
+      <p>Arcé réunit tous les atouts d'un parfait séjour où balades et découvertes sont à portées de main. Les rondeurs de la robuste montagne pyrénéenne, des vallées étroites, des village émouvants, un patrimoine exceptionnel, des traditions bien vivantes
+        !
+        <br><br> Une foule de loisirs se cachent dans le paysage, randonnées pédestres balisées, promenade à cheval, sports en eaux vives, pêche à la truite, vtt ... Le cadre est idyllique: la rivière chante dans son écrin vert veillé par des sentinelles
+        de grès rose aux noms légendaires: Autza, Iparla, Oylarandoy...
+      </p>
+    </div>
+    <div>
+      <a href="#"><img src="img/environ.jpg" alt=""></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <section class="footer" id="contact">
+    <div class="network">
+      <a href="https://www.facebook.com/hotel.arce/" target="_blank"><img src="img/fb.jpg"alt=""></a>
+      <p>E-mail: <a href="mailto:contact@hotel-arce.com">contact@hotel-arce.com</a></p>
+    </div>
+    <div class="adresse">
+      <br>
+      <p><a href="https://www.google.ch/maps/place/H%C3%B4tel+Arc%C3%A9/@43.1752812,-1.348732,15z/data=!4m2!3m1!1s0x0:0xe96f8f4ab35eeb93?sa=X&ved=0ahUKEwib9Zr21vPZAhVFcRQKHfBxB2AQ_BIIpAEwDg" target="_blank">Route Colonel Ispéguy Baïgorry, <br> 64430 Saint-Étienne-de-Baïgorry, France.</a></p>
+    </div>
+    <div class="contact">
+      <br>
+      <p>Téléphone: +33 (0) 5 59 37 40 14</p>
+      <p>Fax: +33 (0) 5 59 37 40 27</p>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
